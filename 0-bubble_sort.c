@@ -11,7 +11,7 @@ void bubble_sort(int *array, size_t size)
 	size_t i, temp;
 	bool swaped;
 
-	if (size < 2)
+	if (!array || size < 2 || array == NULL)
 		return;
 
 	do {
@@ -24,28 +24,9 @@ void bubble_sort(int *array, size_t size)
 				array[i] = array[i + 1];
 				array[i + 1] = temp;
 				swaped = true;
-				print_bubble(array, size);
+				print_array(array, size);
 			}
 		}
 	} while (swaped);
 
-}
-
-/**
- * print_bubble - print print the array
- * @array: array to be printed
- * @size: the size of the array
- * Return: Nothing
- */
-void print_bubble(const int *array, size_t size __attribute__((unused)))
-{
-	size_t i;
-
-	for (i = 0; i < size; i++)
-	{
-		if (i > 0)
-			_printf(", ");
-		_printf("%d", array[i]);
-	}
-	_printf("\n");
 }
