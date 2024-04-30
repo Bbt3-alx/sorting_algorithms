@@ -22,19 +22,19 @@ int _printf(const char *format, ...)
 		i++;
 		switch (format[i])
 		{
-			/*case 'c':
-				len += print_c((char)va_arg(ap, int));
-				break;
-			case 's':
-				len += print_s(va_arg(ap, char *));
-				break;*/
+			/*case 'c':*/
+				/*len += print_c((char)va_arg(ap, int));*/
+				/*break;*/
+			/*case 's':*/
+				/*len += print_s(va_arg(ap, char *));*/
+				/*break;*/
 			case 'd':
 			case 'i':
 				len += print_int(va_arg(ap, int));
 				break;
-			/*case 'b':
-				len += print_b(va_arg(ap, int));
-				break;*/
+			/*case 'b':*/
+				/*len += print_b(va_arg(ap, int));*/
+				/*break;*/
 			case '%':
 				len += write(1, "%", 1);
 				break;
